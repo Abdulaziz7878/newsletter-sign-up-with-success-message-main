@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto" />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        margin: 0;
+        font-size: 1rem;
+        font-family: Roboto, Georgia, "Times New Roman", Times, serif;
+      }
+      .main .container {
+        margin-right: 1.4em;
+      }
+      .main .header {
+        margin-left: 0.7em;
+      }
+      .main p {
+        margin-left: 1.4em;
+      }
+      .main .image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .main .image .small {
+        width: 100%;
+        height: 100%;
+      }
+      .main .large {
+        display: none;
+      }
+      .main li {
+        list-style: url(assets/images/icon-list.svg);
+        padding: 0.4em;
+      }
+      .main label {
+        display: block;
+        margin-left: 1.4em;
+        margin-top: 1.5em;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .main input {
+        margin-top: 0.8em;
+        width: 79%;
+        padding: 1.1em 1.5em;
+        margin-left: 1.4em;
+        margin-bottom: 1.4em;
+        border-radius: 0.6em;
+        border: 1px solid black;
+      }
+
+      .main button {
+        margin-left: 1.4em;
+        text-decoration: none;
+        padding: 1em;
+        width: 92%;
+        border-radius: 0.6em;
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(234, 29%, 20%);
+        border: none;
+      }
+      .main button:hover {
+        background: linear-gradient(to right, #d64567, #ff6257);
+      }
+      .label-container {
+        display: flex;
+        gap: 13em;
+      }
+      .main .red {
+        color: rgba(255, 0, 0, 0.8);
+      }
+      .main .email {
+        background: rgba(255, 0, 0, 0.1);
+        border-color: rgba(255, 0, 0, 0.3);
+        color: rgba(255, 0, 0, 0.9);
+      }
+      .main .email:focus {
+        outline-color: rgba(255, 0, 0, 0.3);
+      }
+      .main.hide {
+        display: none;
+      }
+      .container-success.hide,
+      .main .hide,
+      .main.hide {
+        display: none;
+      }
+      .main #email:focus + button {
+        background: linear-gradient(to right, #d64567, #ff6257);
+      }
+
+      .container-success {
+        display: flex;
+        flex-direction: column;
+        padding: 1.7em;
+        height: 90vh;
+        justify-content: center;
+      }
+      .container-success a button {
+        margin-top: 14em;
+        padding: 1.2em 8em;
+        border: none;
+        background-color: hsl(234, 29%, 20%);
+        color: hsl(0, 0%, 100%);
+        border-radius: 6px;
+      }
+      .container-success p {
+        line-height: 1.3em;
+        font-size: 1.1rem;
+      }
+      .container-success h1 {
+        margin-bottom: 0;
+      }
+      .container-success span {
+        font-weight: 900;
+      }
+      .container-success .image {
+        margin-top: 6em;
+      }
+      .container-success button:hover {
+        background: linear-gradient(to right, #d64567, #ff6257);
+      }
+
+      @media (min-width: 850px) {
+        body {
+          height: 100vh;
+          display: flex;
+          place-content: center;
+          place-items: center;
+          background: hsl(235, 18%, 26%);
+        }
+        .main h1 {
+          font-size: 2.6rem;
+        }
+        .main {
+          display: flex;
+          place-content: center;
+          place-items: center;
+          height: 30em;
+          width: 50em;
+          background: hsl(0, 0%, 100%);
+          padding: 1em;
+          border-radius: 2em;
+        }
+        .main .container {
+          order: -1;
+        }
+        .main .image {
+          width: 40%;
+          height: 100%;
+        }
+        .main .large {
+          display: block;
+        }
+        .main .small {
+          display: none;
+        }
+        .main input {
+          width: 82%;
+        }
+
+        .container-success {
+          background-color: hsl(0, 0%, 100%);
+          height: 20em;
+          width: 20em;
+          padding: 2em;
+          border-radius: 26px;
+        }
+        .container-success h1 {
+          font-size: 2.5rem;
+        }
+        .container-success a button {
+          margin-top: 0;
+          padding: 1em 8em;
+        }
+        .container-success .image {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .container-success p {
+          font-size: 0.8rem;
+          margin-bottom: 2.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- start -->
+    <div class="main">
+      <div class="image">
+        <img
+          class="small"
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt="illustration-sign-up-mobile"
+        />
+        <img
+          class="large"
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="illustration-sign-up-desktop"
+        />
+      </div>
+      <div class="container">
+        <h1 class="header">Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form id="my-form">
+          <div class="label-container">
+            <label for="email">Email address</label>
+            <label class="red hide">Valid email required</label>
+          </div>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@company.com"
+          />
+          <button>Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </div>
+    <!-- End -->
+
+    <!-- Success start -->
+
+    <div class="container-success hide">
+      <div class="image">
+        <img src="assets/images/icon-success.svg" alt="" />
+      </div>
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to
+        <span class="success-email">ash@loremcompany.com</span>. Please open it
+        and click the button inside to confirm your subscription.
+      </p>
+      <a href="index.html"><button>Dismiss message</button></a>
+    </div>
+
+    <!-- Success End -->
+    <script>
+      function setEmail() {
+        let success = document.querySelector("#email").value;
+        let successEmail = document.querySelector(".success-email");
+        successEmail.innerHTML = success;
+      }
+      function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+      function submitForm() {
+        if (validateEmail(document.querySelector("#email").value)) {
+          document.querySelector(".main").classList.add("hide");
+          document.querySelector(".container-success").classList.remove("hide");
+          setEmail();
+          document
+            .getElementById("my-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
+            });
+        } else {
+          document
+            .getElementById("my-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
+            });
+          document.querySelector("#email").classList.add("email");
+          document.querySelector(".red").classList.remove("hide");
+        }
+      }
+      document.querySelector("button").addEventListener("click", submitForm);
+      document.querySelector("#email").addEventListener("input", function () {
+        if (!validateEmail(document.querySelector("#email").value)) {
+          document.querySelector("#email").classList.add("email");
+          document.querySelector(".red").classList.remove("hide");
+        } else {
+          document.querySelector("#email").classList.remove("email");
+          document.querySelector(".red").classList.add("hide");
+        }
+      });
+    </script>
+  </body>
+</html>

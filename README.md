@@ -32,15 +32,19 @@ Users are able to:
 ### Screenshot
 
 ![](Solution/Web%20capture_6-1-2024_133133_127.0.0.1.jpeg)
+
 ![](solution/Web%20capture_6-1-2024_133240_127.0.0.1.jpeg)
+
 ![](solution/Web%20capture_6-1-2024_133342_127.0.0.1.jpeg)
+
 ![](solution/Web%20capture_6-1-2024_133422_127.0.0.1.jpeg)
+
 ![](solution/Web%20capture_6-1-2024_133544_127.0.0.1.jpeg)
 
 ### Links
 
-- Solution URL: [solution URL](https://your-solution-url.com)
-- Live Site URL: [live site URL](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://github.com/Abdulaziz7878/newsletter-sign-up-with-success-message-main)
+- Live Site URL: [live site URL](https://abdulaziz7878.github.io/newsletter-sign-up-with-success-message-main/)
 
 ## My process
 
@@ -58,5 +62,5 @@ Users are able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Abdulaziz7878)
-- Twitter - [@yourusername](https://www.twitter.com/@AbdulazizDegefa)
+- Frontend Mentor - [Abdulaziz](https://www.frontendmentor.io/profile/Abdulaziz7878)
+- Twitter - [Abdulaziz](https://www.twitter.com/@AbdulazizDegefa)
